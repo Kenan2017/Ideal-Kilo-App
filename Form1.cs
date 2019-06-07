@@ -34,7 +34,20 @@ namespace IdealKiloHesaplama
             var kilo = double.Parse(txtKilo.Text);
             double index = (kilo / (boy*boy));
 
-            MessageBox.Show("Vucut Kitle Indeksin " + index);
+            if (index < 20 )
+            {
+                MessageBox.Show("Vucut Kitle Indeksin " + index + ". " + "Zayifsin");
+            }
+
+            else if (index >= 20 && index <25)
+            {
+                MessageBox.Show("Vucut Kitle Indeksin " + index + ". " + "Normalsin");
+            }
+            else
+            {
+                MessageBox.Show("Vucut Kitle Indeksin " + index + ". " + "Sismansin");
+            }
+
         }
     }
 }
